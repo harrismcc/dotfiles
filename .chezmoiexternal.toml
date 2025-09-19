@@ -8,3 +8,7 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+["zsh-git-prompt"]
+    type = "git-repo"
+    url = "git@github.com:olivierverdier/zsh-git-prompt.git"
+    refreshPeriod = "168h"
