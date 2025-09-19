@@ -25,6 +25,8 @@ brew {{ . | quote }}
 {{ range .packages.darwin.casks -}}
 cask {{ . | quote }}
 {{ end -}}
+mas "Wireguard", id: 1451685025
+
 EOF
 
 echo "Installing Mac App Store apps"

@@ -27,6 +27,7 @@
         "oven-sh/bun"
       ],
       "brews": [
+        "dockutil",
         "chezmoi",
         "age",
         "git",
