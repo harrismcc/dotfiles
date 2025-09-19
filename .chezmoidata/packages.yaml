@@ -47,3 +47,4 @@ packages:
     - 'tableplus'
     - 'tailscale-app'
     - 'bitwarden'
+    - 'jordanbaird-ice'
