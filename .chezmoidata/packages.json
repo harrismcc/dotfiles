@@ -15,6 +15,7 @@
         "oven-sh/bun"
       ],
       "brews": [
+        "chezmoi",
         "age",
         "git",
         "git-town",
