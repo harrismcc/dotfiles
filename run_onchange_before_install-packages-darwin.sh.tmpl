@@ -28,13 +28,7 @@ mas install {{ . | quote }}
 echo "Applying Raycast Backup"
 # Raycast hash: {{ include "external_datafiles/external_raycast-backup.rayconfig" | sha256sum }}
 
-# Get current users download directory
-DOWNLOADS=$(ls -d /Users/$(whoami)/Downloads)
-
-# Save to file in downloads
-echo "{{ include "external_datafiles/external_raycast-backup.rayconfig" | sha256sum }}" > $DOWNLOADS/raycastbackup.rayconfig
-
-open $DOWNLOADS/raycastbackup.rayconfig
-
+echo "Path: {{ .chezmoi.sourceDir }}"
+open {{ .chezmoi.sourceDir }}/external_datafiles/external_raycast-backup.rayconfig
 
 {{ end -}}
