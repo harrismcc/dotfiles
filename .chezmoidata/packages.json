@@ -53,7 +53,8 @@
         "yt-dlp",
         "zellij",
         "zsh",
-        "tailscale"
+        "tailscale",
+        "yarn"
       ],
       "casks": [
         "appcleaner",
