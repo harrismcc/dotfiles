@@ -2,3 +2,9 @@
     type = "git-repo"
     url = "https://github.com/harrismcc/nvim-config.git"
     refreshPeriod = "1s"
+[".oh-my-zsh"]
+    type = "archive"
+    url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"

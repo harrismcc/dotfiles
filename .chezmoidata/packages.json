@@ -5,6 +5,19 @@
         {
           "name": "raycast",
           "path": "/Applications/Raycast.app"
+        },
+        {
+          "name": "cleanshot",
+          "path": "/Applications/CleanShot X.app"
+        },
+        {
+          "name": "macs-fan-control",
+          "path": "/Applications/Macs Fan Control.app"
+        },
+        {
+          "name": "ice",
+          "path": "/Applications/Ice.app"
+        },
         }
       ],
       "apps": [
