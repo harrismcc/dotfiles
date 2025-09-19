@@ -1,0 +1,66 @@
+{
+  "packages": {
+    "darwin": {
+      "launchitems": [
+        {
+          "name": "raycast",
+          "path": "/Applications/Raycast.app"
+        }
+      ],
+      "apps": [
+        "1502839586",
+        "937984704"
+      ],
+      "taps": [
+        "oven-sh/bun"
+      ],
+      "brews": [
+        "age",
+        "git",
+        "git-town",
+        "lazygit",
+        "bun",
+        "chezmoi",
+        "croc",
+        "gh",
+        "go",
+        "htop",
+        "hyperfine",
+        "jq",
+        "mas",
+        "neovim",
+        "node",
+        "nvm",
+        "opencode",
+        "pnpm",
+        "pulumi",
+        "ripgrep",
+        "sqlite",
+        "starship",
+        "yt-dlp",
+        "zellij",
+        "zsh",
+        "tailscale"
+      ],
+      "casks": [
+        "appcleaner",
+        "bambu-studio",
+        "iterm2",
+        "colemak-dh",
+        "docker",
+        "discord",
+        "firefox",
+        "ngrok",
+        "raycast",
+        "slack",
+        "macs-fan-control",
+        "cleanshot",
+        "notion-calendar",
+        "tableplus",
+        "tailscale-app",
+        "bitwarden",
+        "jordanbaird-ice"
+      ]
+    }
+  }
+}

@@ -33,7 +33,6 @@ mas purchase {{ . | quote }}
 mas install {{ . | quote }}
 {{end -}}
 
-
 echo "Applying Raycast Backup"
 # Raycast hash: {{ include "external_datafiles/external_raycast-backup.rayconfig" | sha256sum }}
 

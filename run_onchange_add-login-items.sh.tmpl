@@ -1,0 +1,33 @@
+
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+echo "Adding launch items"
+{{ range .packages.darwin.launchitems -}}
+
+echo "Adding launch item: {{ .name }}"
+PLIST="$HOME/Library/LaunchAgents/com.local.{{ .name }}-login.plist"
+mkdir -p "$(dirname "$PLIST")"
+cat > "$PLIST" <<'PLIST'
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key> <string>com.local.{{ .name }}-login</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/open</string>
+    <string>-a</string>
+    <string>{{ .path }}</string>
+  </array>
+  <key>RunAtLoad</key> <true/>
+  <key>KeepAlive</key> <false/>
+  <key>StandardOutPath</key> <string>/tmp/com.local.raycast-login.out</string>
+  <key>StandardErrorPath</key> <string>/tmp/com.local.raycast-login.err</string>
+</dict>
+</plist>
+PLIST
+
+{{ end -}}
+
+{{ end -}}
