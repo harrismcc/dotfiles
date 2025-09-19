@@ -3,6 +3,8 @@ packages:
     apps:
     - '1502839586' # Hand Mirror
     - '937984704'  # Amphetamine
+    taps:
+    - 'oven-sh/bun'
     brews:
     - 'age'
     - 'git'
