@@ -1,0 +1,7 @@
+**/node_modules/
+
+# Github/git stuff
+**/.git/
+**/.github/
+
+**/.DS_Store
