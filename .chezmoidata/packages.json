@@ -28,6 +28,7 @@
       ],
       "brews": [
         "dockutil",
+        "defaultbrowser",
         "chezmoi",
         "age",
         "git",
