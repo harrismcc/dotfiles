@@ -46,16 +46,17 @@
   "mcp": {
     "exa-search": {
       "type": "remote",
+      "enabled": false,
       "url": "https://mcp.exa.ai/mcp?exaApiKey={env:EXA_API_KEY}"
     },
     "context7": {
       "type": "remote",
-      "enabled": true,
+      "enabled": false,
       "url": "https://mcp.context7.com/mcp"
     },
     "linear": {
       "type": "local",
-      "enabled": true,
+      "enabled": false,
       "command": ["npx", "-y", "mcp-remote", "https://mcp.linear.app/sse"]
     },
     "github": {
