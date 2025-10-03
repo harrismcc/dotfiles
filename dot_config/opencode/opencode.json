@@ -6,8 +6,15 @@
     ".cursor/rules/*.md"
   ],
   "small_model": "openrouter/qwen/qwen3-coder",
-  "model": "github-copilot/claude-sonnet-4",
   "autoupdate": true,
+  "agent": {
+    "plan": {
+      "model": "github-copilot/gpt-5-codex"
+    },
+    "build": {
+      "model": "openrouter/z-ai/glm-4.6"
+    }
+  },
   "provider": {
     "openrouter": {
       "models": {
