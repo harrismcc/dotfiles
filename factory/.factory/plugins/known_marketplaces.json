@@ -5,7 +5,7 @@
       "repo": "Factory-AI/factory-plugins"
     },
     "installLocation": "/Users/harris/.factory/plugins/marketplaces/factory-plugins",
-    "lastUpdated": "2026-05-22T06:02:47.834Z",
+    "lastUpdated": "2026-05-22T21:22:10.750Z",
     "autoUpdate": true
   },
   "skills": {
@@ -14,7 +14,7 @@
       "repo": "harrismcc/skills"
     },
     "installLocation": "/Users/harris/.factory/plugins/marketplaces/skills",
-    "lastUpdated": "2026-05-21T22:35:32.000Z",
+    "lastUpdated": "2026-05-22T20:41:58.107Z",
     "autoUpdate": true
   },
   "infilla-plugin": {
