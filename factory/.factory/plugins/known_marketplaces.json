@@ -1,0 +1,29 @@
+{
+  "factory-plugins": {
+    "source": {
+      "source": "github",
+      "repo": "Factory-AI/factory-plugins"
+    },
+    "installLocation": "/Users/harris/.factory/plugins/marketplaces/factory-plugins",
+    "lastUpdated": "2026-05-22T04:38:19.932Z",
+    "autoUpdate": true
+  },
+  "skills": {
+    "source": {
+      "source": "github",
+      "repo": "harrismcc/skills"
+    },
+    "installLocation": "/Users/harris/.factory/plugins/marketplaces/skills",
+    "lastUpdated": "2026-05-21T22:35:32.000Z",
+    "autoUpdate": true
+  },
+  "infilla-plugin": {
+    "source": {
+      "source": "local",
+      "path": "/Users/harris/infilla/infilla-app.harrismcc-namespace-cost-savings/infilla-plugin"
+    },
+    "installLocation": "/Users/harris/infilla/infilla-app.harrismcc-namespace-cost-savings/infilla-plugin",
+    "lastUpdated": "2026-05-22T04:38:19.933Z",
+    "autoUpdate": true
+  }
+}

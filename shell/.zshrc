@@ -1,0 +1,157 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# From OLD .zshrc
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+##############
+# Git Prompt #
+##############
+
+if [ "$ZSH_VERSION" != "" ]
+then
+  source "/Users/harris/zsh-git-prompt/zshrc.sh"
+  PROMPT='%B%m%~%b$(git_super_status) %# '
+fi
+
+
+export GITHUB_USERNAME=harrismcc
+export GITHUB_EMAIL=harris@transcend.io
+export TRANSCEND_DIR=/Users/harris/transcend
+
+# Load zshenv from transcend-io/main
+if [[ -f $TRANSCEND_DIR/main/.devcontainer/files/etc/zsh/zshenv ]]; then
+  source $TRANSCEND_DIR/main/.devcontainer/files/etc/zsh/zshenv
+fi
+
+# Load zshrc from transcend-io/main
+if [[ -f $TRANSCEND_DIR/main/.devcontainer/files/etc/zsh/zshrc ]]; then
+  source $TRANSCEND_DIR/main/.devcontainer/files/etc/zsh/zshrc
+fi
+
+
+# add Pulumi to the PATH
+export PATH=$PATH:$HOME/.pulumi/bin
+
+
+# Starship
+eval "$(starship init zsh)"
+
+export PATH=/Users/harris/.local/bin:$PATH
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+# Set node ram options
+export NODE_OPTIONS="--max_old_space_size=8192"
+alias s="NODE_OPTIONS=\"--max_old_space_size=8192\" yarn node local_dev/start.js"
+
+# Alias to kill all zellij sessions
+alias zclean='zellij kill-all-sessions -y && zellij delete-all-sessions -y'
+alias wz='wt switch -x "WT_ZELLIJ_REPO={{ repo | sanitize }} WT_ZELLIJ_BRANCH={{ branch | sanitize }} WT_ZELLIJ_PATH={{ worktree_path }} /Users/harris/bin/wt-zellij-attach"'
+
+# Strange fix needed to get pre-commit checks to work
+export YARN_IGNORE_NODE=1
+
+
+# Add Docker to path
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+
+# Add python stuff to path
+export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+export PATH="/Users/harris/.local/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/harris/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Disable docker hints
+export DOCKER_CLI_HINTS=falsexport DOCKER_CLI_HINTS=falsee
+
+# bun completions
+[ -s "/Users/harris/.bun/_bun" ] && source "/Users/harris/.bun/_bun"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# Enable prompt caching for claude code
+export DISABLE_PROMPT_CACHING=0
+
+# Alias for git branches that are gone from remote
+alias gone="!c() { git branch -vv | grep ': gone]' | awk '{print $1}'; }; c"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/harris/.lmstudio/bin"
+# End of LM Studio CLI section
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
+export EDITOR=nvim
+
+# opencode
+export PATH=$HOME/.opencode/bin:$PATH
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+source /Users/harris/.daytona.completion_script.zsh
+
+# Cargo (Rust)
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Task Master aliases added on 1/7/2026
+alias tm='task-master'
+alias taskmaster='task-master'
+alias hamster='task-master'
+alias ham='task-master'
+
+# Claude Code deferred MCP loading (added by Taskmaster)
+export ENABLE_EXPERIMENTAL_MCP_CLI='true'
+
+# Added by git-ai installer on Mon Jan 26 13:05:02 PST 2026
+export PATH="/Users/harris/.git-ai/bin:$PATH"
+
+# Added by GitButler installer
+eval "$(but completions zsh)"
+
+# Be able to use :q to quit so my vim-coded brain can work
+alias :q=exit
+alias :wq=exit
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/harris/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/harris/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/harris/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/harris/google-cloud-sdk/completion.zsh.inc'; fi

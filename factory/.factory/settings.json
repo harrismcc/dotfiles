@@ -1,0 +1,159 @@
+{
+  "customModels": [
+    {
+      "model": "claude-opus-4-7",
+      "id": "custom:CC:-Claude-Opus-4.7",
+      "index": 0,
+      "baseUrl": "http://10.0.0.200:8317",
+      "apiKey": "${CLI_PROXY_API_KEY}",
+      "displayName": "CC: Claude Opus 4.7",
+      "reasoningEffort": "high",
+      "noImageSupport": false,
+      "provider": "anthropic"
+    },
+    {
+      "model": "claude-opus-4-6",
+      "id": "custom:CC:-Claude-Opus-4.6-Thinking-Medium-0",
+      "index": 1,
+      "baseUrl": "http://10.0.0.200:8317",
+      "apiKey": "${CLI_PROXY_API_KEY}",
+      "displayName": "CC: Claude Opus 4.6 Thinking Medium",
+      "reasoningEffort": "high",
+      "noImageSupport": false,
+      "provider": "anthropic"
+    },
+    {
+      "model": "claude-sonnet-4-6",
+      "id": "custom:CC:-Claude-Sonnet-4.6-Thinking-Medium-1",
+      "index": 2,
+      "baseUrl": "http://10.0.0.200:8317",
+      "apiKey": "${CLI_PROXY_API_KEY}",
+      "displayName": "CC: Claude Sonnet 4.6 Thinking Medium",
+      "noImageSupport": false,
+      "provider": "anthropic"
+    },
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "id": "custom:CC:-Claude-Haiku-4.5-2",
+      "index": 3,
+      "baseUrl": "http://10.0.0.200:8317",
+      "apiKey": "${CLI_PROXY_API_KEY}",
+      "displayName": "CC: Claude Haiku 4.5",
+      "noImageSupport": false,
+      "provider": "anthropic"
+    },
+    {
+      "model": "gpt-5.4",
+      "id": "custom:GPT-5.4-3",
+      "index": 4,
+      "baseUrl": "http://10.0.0.200:8317/v1",
+      "apiKey": "${CLI_PROXY_API_KEY}",
+      "displayName": "GPT-5.4",
+      "noImageSupport": false,
+      "provider": "openai"
+    },
+    {
+      "model": "gpt-5.5",
+      "id": "custom:GPT-5.5",
+      "index": 5,
+      "baseUrl": "http://10.0.0.200:8317/v1",
+      "apiKey": "${CLI_PROXY_API_KEY}",
+      "displayName": "GPT-5.5",
+      "reasoningEffort": "low",
+      "noImageSupport": false,
+      "provider": "openai"
+    },
+    {
+      "model": "z-ai/glm-5.1",
+      "id": "custom:GLM 5.1",
+      "index": 6,
+      "baseUrl": "http://10.0.0.200:8317/v1",
+      "apiKey": "${CLI_PROXY_API_KEY}",
+      "displayName": "GLM 5.1",
+      "noImageSupport": true,
+      "provider": "generic-chat-completion-api"
+    },
+    {
+      "model": "moonshotai/kimi-k2.6",
+      "id": "custom:Kimi K2.6",
+      "index": 7,
+      "baseUrl": "http://10.0.0.200:8317/v1",
+      "apiKey": "${CLI_PROXY_API_KEY}",
+      "displayName": "Kimi K2.6",
+      "noImageSupport": true,
+      "provider": "generic-chat-completion-api"
+    },
+    {
+      "model": "xiaomi/mimo-v2.5-pro",
+      "id": "custom:MiMo-V2.5-Pro",
+      "index": 8,
+      "baseUrl": "http://10.0.0.200:8317/v1",
+      "apiKey": "${CLI_PROXY_API_KEY}",
+      "displayName": "Xiaomi MiMo-V2.5-Pro",
+      "noImageSupport": true,
+      "provider": "generic-chat-completion-api"
+    }
+  ],
+  "enabledPlugins": {
+    "core@factory-plugins": true,
+    "harris-skills@skills": true,
+    "infilla@infilla-plugin": true
+  },
+  "hasSeenMissionOnboarding": true,
+  "hooks": {
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "${HOME}/.git-ai/bin/git-ai checkpoint droid --hook-input stdin",
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "${HOME}/.git-ai/bin/git-ai checkpoint droid --hook-input stdin",
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "claudeHooksImported": true
+  },
+  "logoAnimation": "off",
+  "missionModelSettings": {
+    "orchestratorModel": "custom:GPT-5.5",
+    "orchestratorReasoningEffort": "medium",
+    "validationWorkerModel": "custom:GPT-5.5",
+    "validationWorkerReasoningEffort": "low",
+    "workerModel": "custom:GPT-5.5",
+    "workerReasoningEffort": "low"
+  },
+  "sessionDefaultSettings": {
+    "model": "custom:GPT-5.5",
+    "reasoningEffort": "low",
+    "autonomyMode": "auto-high",
+    "interactionMode": "auto",
+    "autonomyLevel": "high"
+  },
+  "toolResultDisplay": "compact",
+  "cloudSessionSync": true,
+  "showTokenUsageIndicator": true,
+  "nerdFont": true,
+  "commandDenyList": [],
+  "windowZoomLevel": 0,
+  "remoteAccessEnabled": true,
+  "modelFavorites": [
+    "claude-opus-4-6",
+    "custom:CC:-Claude-Opus-4.7",
+    "custom:GPT-5.5",
+    "kimi-k2.6",
+    "glm-5.1",
+    "gpt-5.5"
+  ]
+}

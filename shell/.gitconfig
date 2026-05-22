@@ -1,0 +1,25 @@
+[user]
+	name = harrismcc
+	email = git@harrismccullers.com
+[core]
+	editor = nano
+[init]
+	defaultBranch = main
+[alias]
+	append = town append
+	diff-parent = town diff-parent
+	hack = town hack
+	new-pull-request = town new-pull-request
+	prepend = town prepend
+	repo = town repo
+	ship = town ship
+	sync = town sync
+	delete = town delete
+	rename = town rename
+[push]
+	autoSetupRemote = true
+[rerere]
+	enabled = true
+[trace2]
+	eventTarget = af_unix:stream:/Users/harris/.git-ai/internal/daemon/trace2.sock
+	eventNesting = 10

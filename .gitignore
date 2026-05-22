@@ -1,8 +1,0 @@
-.DS_Store
-**/.DS_Store
-
-# Local/generated binaries
-/bin/
-
-# Dependency directories from managed config projects
-**/node_modules/
