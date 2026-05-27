@@ -1,0 +1,157 @@
+model = "gpt-5.5"
+model_reasoning_effort = "low"
+personality = "pragmatic"
+
+# Approval mode
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+approvals_reviewer = "user"
+
+[features]
+hooks = true
+terminal_resize_reflow = true
+goals = true
+prevent_idle_sleep = true
+
+[[hooks.PostToolUse]]
+
+[[hooks.PostToolUse.hooks]]
+command = "/Users/harris/.git-ai/bin/git-ai checkpoint codex --hook-input stdin"
+type = "command"
+
+[[hooks.PreToolUse]]
+
+[[hooks.PreToolUse.hooks]]
+command = "/Users/harris/.git-ai/bin/git-ai checkpoint codex --hook-input stdin"
+type = "command"
+
+[[hooks.Stop]]
+
+[[hooks.Stop.hooks]]
+command = "/Users/harris/.git-ai/bin/git-ai checkpoint codex --hook-input stdin"
+type = "command"
+
+[hooks.state."/Users/harris/.codex/config.toml:post_tool_use:0:0"]
+enabled = true
+trusted_hash = "sha256:88b842a404b2dd29fae9ef81b03ae1942adfdaa1edda3a638ff962c4a05575bb"
+
+[hooks.state."/Users/harris/.codex/config.toml:pre_tool_use:0:0"]
+enabled = true
+trusted_hash = "sha256:efe59184681f35fdc82a58941c31df1b0160db86b12a8f2598e439b841c4b0db"
+
+[hooks.state."/Users/harris/.codex/config.toml:stop:0:0"]
+enabled = true
+trusted_hash = "sha256:35f6f7bd11556886d824fae5836fd1161090579c4be897e7392ce856977a4cee"
+
+[marketplaces.openai-bundled]
+last_updated = "2026-05-22T19:12:20Z"
+source_type = "local"
+source = "/Users/harris/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-05-22T19:28:55Z"
+source_type = "local"
+source = "/Users/harris/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[mcp_servers.figma]
+url = "https://mcp.figma.com/mcp"
+
+[mcp_servers.jam-dev]
+enabled = true
+url = "https://mcp.jam.dev/mcp"
+
+[mcp_servers.linear]
+url = "https://mcp.linear.app/mcp"
+
+[model_providers.openrouter]
+base_url = "https://openrouter.ai/api/v1"
+env_key = "OPENROUTER_API_KEY"
+name = "OpenRouter"
+wire_api = "responses"
+
+[notice.model_migrations]
+"gpt-5.2-codex" = "gpt-5.3-codex"
+"gpt-5.3-codex" = "gpt-5.4"
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[plugins."google-drive@openai-curated"]
+enabled = true
+
+[plugins."notion@openai-curated"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."chrome@openai-bundled"]
+enabled = true
+
+[profiles.gpt]
+model = "gpt-5.3-codex"
+model_provider = "openai"
+
+[profiles.minimax]
+model = "minimax/minimax-m2.5"
+model_provider = "openrouter"
+
+[projects."/Users/harris"]
+trust_level = "trusted"
+
+[projects."/Users/harris/.codex"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/Codex/2026-04-27/can-you-read-over-https-www"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/Codex/2026-04-27/i-have-this-repo-with-my"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/Codex/2026-04-27/i-use-this-theme-for-neovim"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/Codex/2026-04-27/what-are-the-linear-tasks-assigned"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/Codex/2026-04-27/what-mcp-servers-do-you-have"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/Codex/2026-04-27/what-tickets-are-assigned-to-me"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/New project"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/diff-buddy"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/help-agent"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/infilla-conductor"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/infilla/infilla-app"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/my-first-worker"]
+trust_level = "trusted"
+
+[projects."/Users/harris/Documents/quick-notes"]
+trust_level = "trusted"
+
+[projects."/Users/harris/infilla/infilla-app"]
+trust_level = "trusted"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4

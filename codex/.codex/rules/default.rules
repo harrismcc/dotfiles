@@ -1,0 +1,6 @@
+prefix_rule(pattern=["rm", "-rf", ".build", "scripts"], decision="allow")
+prefix_rule(pattern=["rm", "-f", "wrangler.jsonc", "worker-configuration.d.ts"], decision="allow")
+prefix_rule(pattern=["bun", "install"], decision="allow")
+prefix_rule(pattern=["bun", "add"], decision="allow")
+prefix_rule(pattern=["npm", "install", "react-router@latest", "@react-router/dev@latest", "@react-router/node@latest", "@react-router/serve@latest", "@react-router/fs-routes@latest", "@react-router/remix-routes-option-adapter@latest", "@sentry/react-router@latest"], decision="allow")
+prefix_rule(pattern=["npm", "install"], decision="allow")
